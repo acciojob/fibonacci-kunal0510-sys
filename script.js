@@ -7,7 +7,7 @@ function fibonacci(num) {
     } else if (num === 2) {
         return num2;
     } else {
-        for (let i = 8; i <= num; i++) {
+        for (let i = 3; i <= num; i++) {
             sum = num1 + num2;
             num1 = num2;
             num2 = sum;
@@ -17,4 +17,4 @@ function fibonacci(num) {
 }
 
 console.log("Fibonacci(1): " + fibonacci(1));
-console.log("Fibonacci(5): " + fibonacci(10));
+console.log("Fibonacci(5): " + fibonacci(5));
