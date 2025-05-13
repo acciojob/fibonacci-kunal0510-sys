@@ -1,20 +1,15 @@
 function fibonacci(num) {
-    let num1 = 0;
-    let num2 = 1;
-    let sum;
-    if (num === 1) {
-        return num1;
-    } else if (num === 2) {
-        return num2;
-    } else {
-        for (let i = 3; i <= num; i++) {
-            sum = num1 + num2;
-            num1 = num2;
-            num2 = sum;
-        }
-        return num2;
+    if (num === 0) return 0;
+    if (num === 1) return 0;
+    if (num === 2) return 1;
+
+    let a = 0, b = 1, c;
+    for (let i = 3; i <= num; i++) {
+        c = a + b;
+        a = b;
+        b = c;
     }
+    return b;
 }
 
-console.log("Fibonacci(1): " + fibonacci(1));
-console.log("Fibonacci(5): " + fibonacci(5));
+module.exports = fibonacci;
